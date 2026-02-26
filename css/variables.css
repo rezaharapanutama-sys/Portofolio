@@ -1,0 +1,45 @@
+/* =============================================================
+   FILE: css/variables.css
+   PURPOSE: CSS custom properties (design tokens)
+   ============================================================= */
+
+:root {
+  /* Colors */
+  --color-bg:        #09090e;
+  --color-bg2:       #0f0f18;
+  --color-bg3:       #141420;
+  --color-card:      #181826;
+  --color-accent:    #00e5ff;
+  --color-accent2:   #7b61ff;
+  --color-text:      #eeeef5;
+  --color-muted:     #8080a0;
+  --color-border:    rgba(255, 255, 255, 0.07);
+
+  /* Typography */
+  --font-heading: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  56px;
+  --space-xl:  80px;
+  --space-2xl: 120px;
+
+  /* Borders */
+  --radius-sm:  8px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-full: 9999px;
+
+  /* Shadows / Glows */
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --glow-accent: 0 0 40px rgba(0, 229, 255, 0.18);
+  --glow-btn:    0 8px 28px rgba(0, 229, 255, 0.38);
+
+  /* Transitions */
+  --ease:        0.25s ease;
+  --ease-slow:   0.5s ease;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
