@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Reza Kurniadi — IT Specialist & Web Developer. Web development, responsive design, website maintenance, IT support. Batam, Indonesia."/>
+  <meta name="author" content="Reza Kurniadi"/>
+  <title>Reza Kurniadi — IT Specialist &amp; Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/sections.css"/>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="prog"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-name">Reza<span>.</span></div>
+  <div class="ld-track"><div class="ld-fill"></div></div>
+  <div class="ld-dots"><span></span><span></span><span></span></div>
+  <div class="ld-sub">Loading portfolio...</div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ═══════════════════════════════
+     NAVIGATION
+═══════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-logo" onclick="goTo('hero')">Reza<span>.</span></div>
+
+  <div class="nav-pills">
+    <button class="npill on" data-sec="hero"      onclick="goTo('hero')">Home</button>
+    <button class="npill"    data-sec="about"     onclick="goTo('about')">About</button>
+    <button class="npill"    data-sec="services"  onclick="goTo('services')">Services</button>
+    <button class="npill"    data-sec="portfolio" onclick="goTo('portfolio')">Portfolio</button>
+    <button class="npill"    data-sec="projects"  onclick="goTo('projects')">Projects</button>
+    <button class="npill"    data-sec="blog"      onclick="goTo('blog')">Blog</button>
+    <button class="npill"    data-sec="contact"   onclick="goTo('contact')">Contact</button>
+    <button class="theme-btn" id="thbtn" onclick="toggleTheme()">☀️</button>
+  </div>
+
+  <div style="display:flex;gap:8px;align-items:center">
+    <button class="theme-btn" id="thbtn2" onclick="toggleTheme()" style="display:none">☀️</button>
+    <button class="hb" id="hb" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobnav">
+  <button class="npill on" data-sec="hero"      onclick="goTo('hero')">🏠 Home</button>
+  <button class="npill"    data-sec="about"     onclick="goTo('about')">👤 About</button>
+  <button class="npill"    data-sec="services"  onclick="goTo('services')">🚀 Services</button>
+  <button class="npill"    data-sec="portfolio" onclick="goTo('portfolio')">🗂 Portfolio</button>
+  <button class="npill"    data-sec="projects"  onclick="goTo('projects')">🧪 Projects</button>
+  <button class="npill"    data-sec="blog"      onclick="goTo('blog')">✍️ Blog</button>
+  <button class="npill"    data-sec="contact"   onclick="goTo('contact')">📧 Contact</button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════════════ -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap" style="position:relative;z-index:1;width:100%">
+    <div class="hero-in">
+
+      <!-- Left -->
+      <div>
+        <div class="badge h-badge"><span class="bdot"></span>Available for projects</div>
+        <h1 class="h-title">
+          Hi, I'm Reza<br>
+          <span class="tw-wrap">
+            <span class="ac" id="tw">IT Specialist.</span><span class="tw-cur"></span>
+          </span>
+        </h1>
+        <p class="h-slogan">Improving your digital presence with smart solutions.</p>
+        <p class="h-desc">Saya membantu bisnis dan individu membuat pengalaman web yang powerful — dari website custom sampai solusi IT lengkap.</p>
+        <div class="h-btns btn-row">
+          <button class="btn btn-p" onclick="goTo('services')">🚀 Hire Me</button>
+          <a class="btn btn-o" href="assets/pdf/Reza-CV.pdf" download="Reza-CV.pdf">📄 Download CV (PDF)</a>
+          <a class="btn btn-o btn-wa" href="https://wa.me/6287879793999" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+        <!-- Section quick-jump pills -->
+        <div class="sec-nav">
+          <button class="snav" onclick="goTo('about')">About ↓</button>
+          <button class="snav" onclick="goTo('services')">Services ↓</button>
+          <button class="snav" onclick="goTo('portfolio')">Portfolio ↓</button>
+          <button class="snav" onclick="goTo('projects')">Projects ↓</button>
+          <button class="snav" onclick="goTo('blog')">Blog ↓</button>
+          <button class="snav" onclick="goTo('contact')">Contact ↓</button>
+        </div>
+      </div>
+
+      <!-- Right: avatar -->
+      <div class="h-right">
+        <div class="av-wrap">
+          <div class="av-circle">👨‍💻</div>
+          <div class="av-r1"></div>
+          <div class="av-r2"></div>
+          <span class="chip c1">⚡ Web Dev</span>
+          <span class="chip c2">📱 Responsive</span>
+          <span class="chip c3">🛠 IT Support</span>
+          <span class="chip c4">🔧 Maintenance</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Scroll indicator -->
+  <div class="scroll-ind" onclick="goTo('about')">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="card cp reveal"><div class="snum">50+</div><div class="slbl">Projects Completed</div></div>
+      <div class="card cp reveal"><div class="snum">3+</div><div class="slbl">Years Experience</div></div>
+      <div class="card cp reveal"><div class="snum">100%</div><div class="slbl">Client Satisfaction</div></div>
+      <div class="card cp reveal"><div class="snum">4</div><div class="slbl">Core Services</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 — ABOUT
+═══════════════════════════════════════════ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <span class="lbl reveal">Get to Know Me</span>
+    <h2 class="ttl reveal">The person behind<br>the screen.</h2>
+
+    <div class="about-grid">
+      <div class="about-stick reveal-l">
+        <div class="av-img">👨‍💻</div>
+        <div class="aname">Reza Kurniadi</div>
+        <div class="arole">IT Specialist &amp; Web Developer</div>
+        <div class="sbars">
+          <div><div class="sb-lbl"><span>Web Development</span><span>90%</span></div><div class="sb-track"><div class="sb-fill" style="width:90%"></div></div></div>
+          <div><div class="sb-lbl"><span>Responsive Design</span><span>88%</span></div><div class="sb-track"><div class="sb-fill" style="width:88%"></div></div></div>
+          <div><div class="sb-lbl"><span>IT Support</span><span>85%</span></div><div class="sb-track"><div class="sb-fill" style="width:85%"></div></div></div>
+          <div><div class="sb-lbl"><span>Web Maintenance</span><span>82%</span></div><div class="sb-track"><div class="sb-fill" style="width:82%"></div></div></div>
+        </div>
+        <a class="btn btn-p" href="assets/pdf/Reza-CV.pdf" download="Reza-CV.pdf" style="width:100%;justify-content:center">📄 Download My CV (PDF)</a>
+        <a class="btn btn-o" href="https://www.linkedin.com/in/reza-kurniadi-65b9823ab/" target="_blank" rel="noopener" style="width:100%;justify-content:center">🔗 LinkedIn</a>
+        <a class="btn btn-o btn-wa" href="https://wa.me/6287879793999" target="_blank" rel="noopener" style="width:100%;justify-content:center">💬 WhatsApp</a>
+      </div>
+
+      <div class="ab-body reveal-r">
+        <h3>My Story</h3>
+        <p>Saya Reza Kurniadi — IT Specialist dan web developer yang mengubah kecintaan mendalam pada teknologi menjadi karier nyata. Yang awalnya dimulai dari rasa ingin tahu tentang cara kerja website, kini berkembang menjadi misi: membantu bisnis dan individu membangun kehadiran digital yang kuat dan andal.</p>
+        <p>Sebagai mahasiswa dan IT enthusiast yang self-driven, saya telah menginvestasikan banyak waktu untuk belajar, membangun, dan menyempurnakan kemampuan saya. Setiap project adalah tantangan baru yang saya hadapi dengan energi dan dedikasi.</p>
+        <h3>Background</h3>
+        <p>Dengan pengalaman langsung dalam web development, responsive design, website maintenance, dan IT support, saya membawa keahlian teknis sekaligus pemikiran kreatif ke setiap pekerjaan. Saya telah bekerja pada project nyata mulai dari website bisnis kecil hingga setup jaringan IT lokal dan audit keamanan.</p>
+        <h3>Passion &amp; Drive</h3>
+        <p>Teknologi terus berkembang — dan saya suka mengikutinya. Apapun tantangannya, saya menghadapinya dengan rasa ingin tahu dan ketekunan.</p>
+        <div class="mv-grid">
+          <div class="card cp mv-card reveal"><h4>🎯 Mission</h4><p>Memberikan solusi web dan IT berkualitas tinggi yang benar-benar meningkatkan kehadiran digital dan hasil bisnis klien saya.</p></div>
+          <div class="card cp mv-card reveal" style="transition-delay:.1s"><h4>🔭 Vision</h4><p>Menjadi IT specialist terpercaya yang dikenal karena keunggulan, keandalan, dan dampak digital yang bermakna.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 — SERVICES
+═══════════════════════════════════════════ -->
+<section id="services" class="sec">
+  <div class="wrap">
+    <span class="lbl reveal">What I Offer</span>
+    <h2 class="ttl reveal">Services yang bisa<br>kamu order sekarang.</h2>
+    <p class="sub reveal">Pilih layanan, klik Order Now, isi form singkat — saya balas dalam 24 jam dengan rencana dan harga custom.</p>
+
+    <div class="svc-grid">
+      <div class="card cp card-top svc-card reveal">
+        <div class="svc-ico">🌐</div>
+        <div class="svc-ttl">Website Development</div>
+        <div class="svc-dsc">Website profesional, cepat, dan fungsional — dari landing page sampai situs bisnis multi-halaman dengan kode bersih dan modern.</div>
+        <div class="svc-ft">
+          <span class="price-tag">Mulai Rp 1.500.000</span>
+          <button class="btn btn-p btn-sm" onclick="openOrder('Website Development','Mulai Rp 1.500.000')">🛒 Order Now</button>
+        </div>
+      </div>
+      <div class="card cp card-top svc-card reveal" style="transition-delay:.08s">
+        <div class="svc-ico">📱</div>
+        <div class="svc-ttl">Responsive Web Design</div>
+        <div class="svc-dsc">Website tampil sempurna di semua perangkat — desktop, tablet, dan HP. Dirancang dengan pendekatan mobile-first untuk pengalaman terbaik di mana saja.</div>
+        <div class="svc-ft">
+          <span class="price-tag">Mulai Rp 1.000.000</span>
+          <button class="btn btn-p btn-sm" onclick="openOrder('Responsive Web Design','Mulai Rp 1.000.000')">🛒 Order Now</button>
+        </div>
+      </div>
+      <div class="card cp card-top svc-card reveal" style="transition-delay:.16s">
+        <div class="svc-ico">🔧</div>
+        <div class="svc-ttl">Website Maintenance</div>
+        <div class="svc-dsc">Jaga website tetap update, aman, dan optimal. Layanan bulanan: update konten, perbaikan bug, monitoring keamanan, dan optimasi performa.</div>
+        <div class="svc-ft">
+          <span class="price-tag">Mulai Rp 500.000 / bulan</span>
+          <button class="btn btn-p btn-sm" onclick="openOrder('Website Maintenance','Mulai Rp 500.000/bulan')">🛒 Order Now</button>
+        </div>
+      </div>
+      <div class="card cp card-top svc-card reveal" style="transition-delay:.24s">
+        <div class="svc-ico">🛠</div>
+        <div class="svc-ttl">IT Support Services</div>
+        <div class="svc-dsc">Troubleshooting software, setup jaringan, konsultasi hardware, konfigurasi perangkat, dan konsultasi IT untuk individu maupun bisnis kecil.</div>
+        <div class="svc-ft">
+          <span class="price-tag">Mulai Rp 400.000 / sesi</span>
+          <button class="btn btn-p btn-sm" onclick="openOrder('IT Support Services','Mulai Rp 400.000/sesi')">🛒 Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card cp reveal" style="display:flex;align-items:center;gap:20px;margin-top:20px;flex-wrap:wrap">
+      <span style="font-size:2rem">💬</span>
+      <div style="flex:1;min-width:180px">
+        <strong>Butuh paket custom?</strong>
+        <p style="color:var(--muted);font-size:.88rem;margin-top:4px">Semua harga adalah harga mulai. Harga final tergantung scope dan timeline. Chat langsung untuk diskusi!</p>
+      </div>
+      <a class="btn btn-o btn-wa" href="https://wa.me/6287879793999" target="_blank" rel="noopener" style="flex-shrink:0">💬 Chat WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 — PORTFOLIO
+═══════════════════════════════════════════ -->
+<section id="portfolio" class="sec">
+  <div class="wrap">
+    <span class="lbl reveal">My Work</span>
+    <h2 class="ttl reveal">Projects &amp; real results.</h2>
+    <p class="sub reveal">Beberapa project nyata yang menunjukkan kemampuan saya di web development, desain, dan IT support.</p>
+
+    <div class="port-grid">
+      <div class="card port-card reveal"><div class="port-thumb">🛍️</div><div class="port-body"><span class="tag">Web Dev</span><h4>E-Commerce Landing Page</h4><p>Landing page produk responsif penuh dengan UI interaktif dan kode bersih — dirancang untuk konversi pengunjung jadi pembeli.</p></div></div>
+      <div class="card port-card reveal" style="transition-delay:.08s"><div class="port-thumb">🏢</div><div class="port-body"><span class="tag">Business</span><h4>Website Bisnis Multi-Halaman</h4><p>Website lengkap untuk bisnis lokal — form kontak, daftar layanan, halaman tentang, dan integrasi Google Maps.</p></div></div>
+      <div class="card port-card reveal" style="transition-delay:.16s"><div class="port-thumb">📱</div><div class="port-body"><span class="tag">Responsive</span><h4>Mobile-First Redesign</h4><p>Membangun ulang website lama dari nol dengan mobile-first, meningkatkan load time dan UX di semua perangkat.</p></div></div>
+      <div class="card port-card reveal" style="transition-delay:.24s"><div class="port-thumb">🔒</div><div class="port-body"><span class="tag">IT Support</span><h4>Setup Jaringan Kantor</h4><p>Konfigurasi jaringan lokal yang aman — router, firewall, kontrol akses pengguna, dan dokumentasi keamanan.</p></div></div>
+      <div class="card port-card reveal" style="transition-delay:.32s"><div class="port-thumb">🎓</div><div class="port-body"><span class="tag">Sertifikasi</span><h4>Sertifikasi Web Development</h4><p>Menyelesaikan program web dev bersertifikat mencakup HTML5, CSS3, JavaScript ES6+, dan responsive design — predikat terbaik.</p></div></div>
+      <div class="card port-card reveal" style="transition-delay:.40s"><div class="port-thumb">⚙️</div><div class="port-body"><span class="tag">Maintenance</span><h4>Maintenance Rutin (3 Klien)</h4><p>Maintenance bulanan untuk 3 website bisnis aktif — update, monitoring keamanan, uptime check, dan laporan performa.</p></div></div>
+    </div>
+
+    <!-- Testimonials -->
+    <div style="margin-top:68px">
+      <span class="lbl reveal">Kata Klien</span>
+      <h3 class="ttl reveal" style="font-size:clamp(1.4rem,2.5vw,2rem)">Yang mereka katakan.</h3>
+      <div class="testi-grid">
+        <div class="card cp reveal" style="position:relative">
+          <div class="testi-q">"</div>
+          <p class="testi-txt">"Reza membangun website perusahaan kami dalam waktu kurang dari seminggu. Desainnya bersih, profesional, dan persis seperti yang kami bayangkan. Komunikasinya sangat baik."</p>
+          <div class="testi-auth"><div class="testi-av">👨‍💼</div><div><div class="tname">Ahmad Fauzi</div><div class="trole">Owner, Fauzi Trading Co.</div><div class="tstars">★★★★★</div></div></div>
+        </div>
+        <div class="card cp reveal" style="position:relative;transition-delay:.1s">
+          <div class="testi-q">"</div>
+          <p class="testi-txt">"Masalah jaringan kantor kami yang berlarut-larut diselesaikan Reza secara remote dalam waktu kurang dari 30 menit. Sangat recommended untuk IT support!"</p>
+          <div class="testi-auth"><div class="testi-av">👩‍💼</div><div><div class="tname">Siti Rahayu</div><div class="trole">Manager, CV Berkah Jaya</div><div class="tstars">★★★★★</div></div></div>
+        </div>
+        <div class="card cp reveal" style="position:relative;transition-delay:.2s">
+          <div class="testi-q">"</div>
+          <p class="testi-txt">"Redesign website membuat bisnis kami terlihat jauh lebih kredibel. Minggu pertama langsung ada lebih banyak inquiry. Reza benar-benar paham kebutuhan klien."</p>
+          <div class="testi-auth"><div class="testi-av">👨‍🍳</div><div><div class="tname">Budi Santoso</div><div class="trole">Owner, Warung Budi</div><div class="tstars">★★★★★</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — PROJECTS & TESTING
+═══════════════════════════════════════════ -->
+<section id="projects" class="sec">
+  <div class="wrap">
+    <span class="lbl reveal">Behind the Scenes</span>
+    <h2 class="ttl reveal">Projects &amp; Testing Results.</h2>
+    <p class="sub reveal">Eksperimen nyata, hasil testing, dan project development — mendokumentasikan apa yang saya bangun, uji, dan pelajari.</p>
+
+    <div class="proj-filter reveal">
+      <button class="flt on" onclick="filterProj('all',this)">All</button>
+      <button class="flt" onclick="filterProj('web',this)">Web Dev</button>
+      <button class="flt" onclick="filterProj('responsive',this)">Responsive</button>
+      <button class="flt" onclick="filterProj('it',this)">IT / Network</button>
+      <button class="flt" onclick="filterProj('testing',this)">Testing</button>
+    </div>
+
+    <div class="proj-grid">
+      <div class="card pj-card reveal" data-cat="web"><div class="pj-hd"><div class="pj-ico">🌐</div><span class="pj-st st-done">✅ Done</span></div><div class="pj-bd"><h4>Business Landing Page v2</h4><p>Rebuilt dengan HTML5, CSS Grid, dan vanilla JS — fokus pada aksesibilitas dan performa penuh.</p><div class="tech-row"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS Grid</span><span class="tech-tag">JavaScript</span></div><div class="pj-res"><strong>🧪 Hasil</strong>Lighthouse: Performance 97, Accessibility 95, SEO 100. Load time &lt;1.2s.</div></div></div>
+      <div class="card pj-card reveal" style="transition-delay:.08s" data-cat="responsive"><div class="pj-hd"><div class="pj-ico">📱</div><span class="pj-st st-done">✅ Done</span></div><div class="pj-bd"><h4>Mobile Responsiveness Testing</h4><p>5 layout diuji di 12 ukuran perangkat. 8 isu layout-breaking ditemukan dan diperbaiki.</p><div class="tech-row"><span class="tech-tag">CSS Flexbox</span><span class="tech-tag">Media Queries</span><span class="tech-tag">DevTools</span></div><div class="pj-res"><strong>🧪 Hasil</strong>Semua 12 breakpoint lulus. Zero overflow. Konsisten di iOS Safari &amp; Android Chrome.</div></div></div>
+      <div class="card pj-card reveal" style="transition-delay:.16s" data-cat="it"><div class="pj-hd"><div class="pj-ico">🔌</div><span class="pj-st st-done">✅ Done</span></div><div class="pj-bd"><h4>Network Security Audit</h4><p>Audit jaringan kantor kecil — port terbuka, password lemah, firmware outdated ditemukan dan diperbaiki.</p><div class="tech-row"><span class="tech-tag">Nmap</span><span class="tech-tag">Wireshark</span><span class="tech-tag">Router Config</span></div><div class="pj-res"><strong>🧪 Hasil</strong>3 port ditutup, 2 firmware diupdate. Lulus basic pen-testing checklist.</div></div></div>
+      <div class="card pj-card reveal" style="transition-delay:.24s" data-cat="testing"><div class="pj-hd"><div class="pj-ico">⚡</div><span class="pj-st st-done">✅ Done</span></div><div class="pj-bd"><h4>Page Speed Optimization</h4><p>Optimasi WebP, minifikasi CSS/JS, lazy loading, browser caching. Diukur sebelum dan sesudah.</p><div class="tech-row"><span class="tech-tag">PageSpeed</span><span class="tech-tag">GTmetrix</span><span class="tech-tag">WebP</span></div><div class="pj-res"><strong>🧪 Hasil</strong>Load time 4.3s → 1.1s. Berat halaman -68%. GTmetrix grade C → A.</div></div></div>
+      <div class="card pj-card reveal" style="transition-delay:.32s" data-cat="web"><div class="pj-hd"><div class="pj-ico">🎨</div><span class="pj-st st-wip">⏳ Ongoing</span></div><div class="pj-bd"><h4>Portfolio ini — Single Page Scroll</h4><p>Dark/light mode, typewriter, loader, blog reader, scroll reveal, WA float button — semua dalam 1 halaman.</p><div class="tech-row"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS Animations</span><span class="tech-tag">Vanilla JS</span></div><div class="pj-res"><strong>🔄 Status</strong>Semua section live. Scroll-based nav aktif. Semua fitur fungsional.</div></div></div>
+      <div class="card pj-card reveal" style="transition-delay:.40s" data-cat="it"><div class="pj-hd"><div class="pj-ico">🛠</div><span class="pj-st st-test">🔬 Testing</span></div><div class="pj-bd"><h4>Remote Desktop Support Setup</h4><p>Konfigurasi AnyDesk + Windows Quick Assist untuk IT support remote yang andal bagi klien.</p><div class="tech-row"><span class="tech-tag">Windows 11</span><span class="tech-tag">AnyDesk</span><span class="tech-tag">Remote Desktop</span></div><div class="pj-res"><strong>🔬 Hasil</strong>Latency avg 24ms. Sesi stabil 60+ menit. Dokumentasi onboarding selesai.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 6 — BLOG
+═══════════════════════════════════════════ -->
+<section id="blog" class="sec">
+  <div class="wrap">
+    <span class="lbl reveal">Knowledge &amp; Insights</span>
+    <h2 class="ttl reveal">Blog &amp; IT Articles.</h2>
+    <p class="sub reveal">Saya menulis tentang web development, tips IT, dan freelancing — berbagi apa yang saya pelajari dari project nyata. Klik artikel untuk membaca.</p>
+
+    <div class="blog-grid">
+      <div class="card blog-card reveal" onclick="openBlog(1)"><div class="blog-thumb">⚡</div><div class="blog-body"><div class="blog-meta"><span>📅 Jan 2025</span><span>⏱ 5 min</span></div><span class="tag" style="margin-bottom:10px;display:inline-block">Performance</span><h4>How I Cut Website Load Time from 4.3s to 1.1s</h4><p>Teknik nyata yang saya gunakan untuk memotong load time website klien sebesar 74%.</p><span class="blog-rd">Baca artikel →</span></div></div>
+      <div class="card blog-card reveal" style="transition-delay:.08s" onclick="openBlog(2)"><div class="blog-thumb">🔒</div><div class="blog-body"><div class="blog-meta"><span>📅 Dec 2024</span><span>⏱ 7 min</span></div><span class="tag" style="margin-bottom:10px;display:inline-block">IT Security</span><h4>Basic Network Security Checklist untuk Kantor Kecil</h4><p>Checklist yang saya pakai saat melakukan IT security audit untuk klien bisnis kecil.</p><span class="blog-rd">Baca artikel →</span></div></div>
+      <div class="card blog-card reveal" style="transition-delay:.16s" onclick="openBlog(3)"><div class="blog-thumb">📱</div><div class="blog-body"><div class="blog-meta"><span>📅 Nov 2024</span><span>⏱ 4 min</span></div><span class="tag" style="margin-bottom:10px;display:inline-block">Web Design</span><h4>Kenapa Saya Selalu Build Mobile-First</h4><p>60%+ traffic web dari mobile. Begini cara mobile-first workflow mengubah semua project saya.</p><span class="blog-rd">Baca artikel →</span></div></div>
+      <div class="card blog-card reveal" style="transition-delay:.24s" onclick="openBlog(4)"><div class="blog-thumb">🛠</div><div class="blog-body"><div class="blog-meta"><span>📅 Oct 2024</span><span>⏱ 6 min</span></div><span class="tag" style="margin-bottom:10px;display:inline-block">IT Tips</span><h4>Setup Remote Desktop Support yang Benar</h4><p>IT support remote menghemat jam perjalanan. Begini cara saya menyiapkannya untuk klien.</p><span class="blog-rd">Baca artikel →</span></div></div>
+      <div class="card blog-card reveal" style="transition-delay:.32s" onclick="openBlog(5)"><div class="blog-thumb">🌐</div><div class="blog-body"><div class="blog-meta"><span>📅 Sep 2024</span><span>⏱ 5 min</span></div><span class="tag" style="margin-bottom:10px;display:inline-block">Web Dev</span><h4>HTML, CSS, JS: Apa Kamu Benar-Benar Butuh Framework?</h4><p>Semua orang mendorong React. Tapi untuk sebagian besar project klien, vanilla lebih baik.</p><span class="blog-rd">Baca artikel →</span></div></div>
+      <div class="card blog-card reveal" style="transition-delay:.40s" onclick="openBlog(6)"><div class="blog-thumb">🎯</div><div class="blog-body"><div class="blog-meta"><span>📅 Aug 2024</span><span>⏱ 6 min</span></div><span class="tag" style="margin-bottom:10px;display:inline-block">Freelance</span><h4>Cara Menentukan Harga Layanan Web Development Freelance</h4><p>Penetapan harga adalah bagian tersulit dalam freelancing. Ini framework yang saya pakai.</p><span class="blog-rd">Baca artikel →</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 7 — CONTACT
+═══════════════════════════════════════════ -->
+<section id="contact" class="sec" style="padding-bottom:110px">
+  <div class="wrap">
+    <span class="lbl reveal">Get In Touch</span>
+    <h2 class="ttl reveal">Yuk kerja sama<br>bikin sesuatu yang keren.</h2>
+    <p class="sub reveal">Punya project? Butuh bantuan IT? Isi form di bawah atau hubungi langsung — saya balas dalam 24 jam.</p>
+
+    <div class="ct-grid">
+      <!-- Info -->
+      <div class="ct-items reveal-l">
+        <div class="card cp ct-item">
+          <div class="ct-ico">📧</div>
+          <div><h4>Email</h4><p><a href="mailto:rezaharapanutama@gmail.com">rezaharapanutama@gmail.com</a></p></div>
+        </div>
+        <div class="card cp ct-item">
+          <div class="ct-ico">💬</div>
+          <div><h4>WhatsApp</h4><p><a href="https://wa.me/6287879793999" target="_blank" rel="noopener">+62 878-7979-3999</a></p></div>
+        </div>
+        <div class="card cp ct-item">
+          <div class="ct-ico">🔗</div>
+          <div><h4>LinkedIn</h4><p><a href="https://www.linkedin.com/in/reza-kurniadi-65b9823ab/" target="_blank" rel="noopener">reza-kurniadi-65b9823ab</a></p></div>
+        </div>
+        <div class="card cp ct-item">
+          <div class="ct-ico">📍</div>
+          <div><h4>Lokasi</h4><p>Batam, Kepulauan Riau, Indonesia</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+          <a class="btn btn-p" href="assets/pdf/Reza-CV.pdf" download="Reza-CV.pdf" style="justify-content:center">📄 Download CV (PDF)</a>
+          <a class="btn btn-o btn-wa" href="https://wa.me/6287879793999" target="_blank" rel="noopener" style="justify-content:center">💬 Chat WhatsApp Sekarang</a>
+          <a class="btn btn-o" href="https://www.linkedin.com/in/reza-kurniadi-65b9823ab/" target="_blank" rel="noopener" style="justify-content:center">🔗 Connect di LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="ct-form reveal-r">
+        <div class="frow">
+          <div class="fg"><label class="fl">Nama Kamu *</label><input class="fc" type="text" id="cf-n" placeholder="John Doe"/></div>
+          <div class="fg"><label class="fl">Email *</label><input class="fc" type="email" id="cf-e" placeholder="john@email.com"/></div>
+        </div>
+        <div class="fg"><label class="fl">Subjek / Layanan yang Diminati</label><input class="fc" type="text" id="cf-s" placeholder="e.g. Bikin Website, IT Support, dll."/></div>
+        <div class="fg"><label class="fl">Pesan *</label><textarea class="fc" id="cf-m" placeholder="Ceritakan project atau kebutuhanmu — semakin detail semakin baik..."></textarea></div>
+        <button class="btn btn-p" onclick="submitForm()" style="width:100%;justify-content:center;font-size:1rem">🚀 Kirim Pesan</button>
+        <p style="text-align:center;margin-top:14px;font-size:.82rem;color:var(--muted)">
+          Atau langsung chat: <a href="https://wa.me/6287879793999" target="_blank" rel="noopener" style="color:#25D366;font-weight:600">💬 +62 878-7979-3999</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <strong>Reza Kurniadi</strong> — IT Specialist &amp; Web Developer · Batam, Indonesia</p>
+  <div class="ft-links">
+    <a href="mailto:rezaharapanutama@gmail.com">Email</a>
+    <a href="https://wa.me/6287879793999" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/reza-kurniadi-65b9823ab/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="assets/pdf/Reza-CV.pdf" download="Reza-CV.pdf">Download CV</a>
+    <a href="#" onclick="goTo('hero');return false">↑ Top</a>
+  </div>
+</footer>
+
+<!-- ORDER MODAL -->
+<div class="overlay" id="m-ov">
+  <div class="modal">
+    <button class="mcl" onclick="closeOrder()">&#x2715;</button>
+    <div class="mttl" id="m-ttl">Order Service</div>
+    <div class="mprice" id="m-price"></div>
+    <div class="mform">
+      <input class="fc" type="text"  id="o-name"  placeholder="Nama lengkap kamu *"/>
+      <input class="fc" type="email" id="o-email" placeholder="Email kamu *"/>
+      <input class="fc" type="text"  id="o-phone" placeholder="WhatsApp / telepon (opsional)"/>
+      <textarea class="fc" id="o-desc" placeholder="Ceritakan kebutuhanmu — semakin detail semakin baik untuk quote..."></textarea>
+      <button class="btn btn-p" onclick="submitOrder()" style="justify-content:center">📩 Kirim Order</button>
+      <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:8px">
+        Atau langsung: <a href="https://wa.me/6287879793999" target="_blank" style="color:#25D366;font-weight:600">💬 WhatsApp +62 878-7979-3999</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG READER -->
+<div class="br-ov" id="br-ov">
+  <div class="br">
+    <button class="br-cl" onclick="closeBlog()">&#x2715;</button>
+    <div id="br-tag" class="tag" style="margin-bottom:14px"></div>
+    <h2 id="br-ttl"></h2>
+    <div class="blog-meta" style="margin-top:10px"><span id="br-date"></span>&nbsp;&nbsp;<span id="br-time"></span></div>
+    <div class="br-div"></div>
+    <div class="br-body" id="br-body"></div>
+    <div class="br-div"></div>
+    <div style="text-align:center">
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px">Artikel ini bermanfaat? Yuk ngobrol lebih lanjut.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-p" onclick="closeBlog();goTo('contact')">📧 Hubungi Saya</button>
+        <a class="btn btn-o btn-wa" href="https://wa.me/6287879793999" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WA FLOAT BUTTON -->
+<a class="wa-float" href="https://wa.me/6287879793999" target="_blank" rel="noopener" title="Chat WhatsApp">
+  <div class="wa-ico">💬</div>
+  <span class="wa-lbl">Chat WhatsApp</span>
+</a>
+
+<!-- BACK TO TOP -->
+<button class="btt" id="btt" title="Kembali ke atas">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- SINGLE SCRIPT -->
+<script src="js/app.js"></script>
+</body>
+</html>
